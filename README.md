@@ -1,6 +1,6 @@
 # Shadowrocket 最简配置
 
-国内网站直连，国外网站和 AI 服务走你当前选中的节点。不含广告拦截，也不含节点，节点用你自己的订阅。
+国内网站直连，其余走你当前选中的节点。不含广告拦截，也不含节点，节点用你自己的订阅。
 
 ## 使用
 
@@ -15,13 +15,16 @@
 
 ## 规则
 
-| 流量 | 走向 |
+只有三条：
+
+| 规则 | 走向 |
 |---|---|
-| AI 服务（Claude、ChatGPT、Gemini、Grok、Perplexity 等） | 当前选中的节点（用 AI 的话，节点要选美国等支持地区） |
-| 国外常用网站（按域名清单） | 当前选中的节点 |
-| 国内网站（按域名清单） | 直连 |
-| 其他：国内 IP 直连，其余走代理 | — |
+| 常用国内网站（按域名清单） | 直连 |
+| 其他国内 IP | 直连 |
+| 其余全部 | 当前选中的节点 |
 
-DNS 用阿里 `223.5.5.5` 和腾讯 `119.29.29.29` 的普通查询。国内网站按域名清单直连，不依赖 DNS 解析出的 IP，避免国内网站被绕到海外节点。
+用 Claude、ChatGPT、Gemini 等 AI 服务的话，节点要选美国等支持的地区。
 
-规则清单来自 [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script) 和 [iab0x00/ProxyRules](https://github.com/iab0x00/ProxyRules)，由它们的作者持续更新。
+DNS 用阿里 `223.5.5.5` 和腾讯 `119.29.29.29` 的普通查询。常用国内网站按域名直连，不依赖 DNS 解析出的 IP，避免被绕到海外节点。
+
+国内域名清单来自 [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script)，由作者持续更新。
