@@ -15,11 +15,13 @@
 
 ## 规则
 
-只有三条：
+只有五条：
 
 | 规则 | 走向 |
 |---|---|
 | 常用国内网站（按域名清单） | 直连 |
+| 苹果海外下载站 `secure-appldnld.apple.com` | 当前选中的节点 |
+| 苹果服务（按域名清单） | 直连 |
 | 其他国内 IP | 直连 |
 | 其余全部 | 当前选中的节点 |
 
@@ -27,4 +29,4 @@
 
 DNS 用阿里 `223.5.5.5` 和腾讯 `119.29.29.29` 的普通查询。常用国内网站按域名直连，不依赖 DNS 解析出的 IP，避免被绕到海外节点。
 
-国内域名清单来自 [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script)，由作者持续更新。
+国内和苹果域名清单都来自 [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script)，由作者持续更新。
